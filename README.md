@@ -86,3 +86,5 @@ The application includes error handling for various scenarios. When an error occ
 The application includes a DatabaseSeeder class located in the com.example.irrigation.utils package. This class is responsible for seeding initial data into the database. During the application startup, the run method of the DatabaseSeeder class is executed, which in turn calls the seedData method to create and save sample data.
 
 To customize the seeded data, you can modify the seedData method in the DatabaseSeeder class. The current implementation creates a plot, a time slot, and an irrigation process associated with the plot. Additionally, the startSensor method is called to set the sensor's status.
+## PostMan Collection 
+The application includes a Postman Collection on src/main/resources/static/Irrigation-System.postman_collection.json
