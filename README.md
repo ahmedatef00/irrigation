@@ -23,21 +23,7 @@ This repository contains the code for an irrigation system, which provides APIs 
 
 The application can be configured using the `application.properties` file located in the `src/main/resources` directory. The following properties are available for configuration:
 
-- `server.port`: Specifies the port on which the application will run. Default value is `8082`.
-- `server.error.include-stacktrace`: Controls whether stack traces should be included in error responses. Default value is `never`.
-- `server.servlet.context-path`: Specifies the context path for the API. Default value is `/api`.
-- `spring.application.name`: Defines the application name. Default value is `irrigation`.
-- `spring.datasource.username`: MySQL database username.
-- `spring.datasource.password`: MySQL database password.
-- `spring.datasource.url`: JDBC URL for connecting to the MySQL database.
-- `spring.jpa.show-sql`: Controls whether SQL queries should be logged. Default value is `true`.
-- `spring.jpa.generate-ddl`: Specifies whether Hibernate should generate DDL statements. Default value is `true`.
-- `spring.jpa.hibernate.ddl-auto`: Specifies the Hibernate DDL generation strategy. Default value is `validate`.
-- `spring.jpa.hibernate.dialect`: Specifies the Hibernate dialect for MySQL. Default value is `org.hibernate.dialect.MySQL5InnoDBDialect`.
-- `spring.jpa.properties.hibernate.format_sql`: Controls whether formatted SQL should be logged. Default value is `true`.
-- `spring.liquibase.change-log`: Specifies the Liquibase changelog file path.
-
-Additional configuration properties related to the irrigation system can be found in the `application.properties` file. These properties include `irrigation.speed` (speed of irrigation), and `max.sensor.retries` (maximum number of sensor connection retries).
+configuration properties related to the irrigation system can be found in the `application.properties` file. These properties include `irrigation.speed` (speed of irrigation), and `max.sensor.retries` (maximum number of sensor connection retries).
 
 ## Usage
 
@@ -95,12 +81,8 @@ The application includes the following controllers:
 
 The application includes error handling for various scenarios. When an error occurs, an appropriate error response is returned, including a message, status code, timestamp, and details.
 
-## Contributions
+## Database Seeder
 
-Contributions to this project are welcome. If you find any issues or want to suggest improvements, please create a new issue or submit a pull request.
+The application includes a DatabaseSeeder class located in the com.example.irrigation.utils package. This class is responsible for seeding initial data into the database. During the application startup, the run method of the DatabaseSeeder class is executed, which in turn calls the seedData method to create and save sample data.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-Feel free to use, modify, and distribute this code for personal or commercial purposes.
+To customize the seeded data, you can modify the seedData method in the DatabaseSeeder class. The current implementation creates a plot, a time slot, and an irrigation process associated with the plot. Additionally, the startSensor method is called to set the sensor's status.
