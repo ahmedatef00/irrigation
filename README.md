@@ -80,6 +80,8 @@ The application includes the following controllers:
 ## Error Handling
 
 The application includes error handling for various scenarios. When an error occurs, an appropriate error response is returned, including a message, status code, timestamp, and details.
+## DB Design 
+![Alt Text](https://github.com/ahmedatef00/irrigation/blob/master/src/main/resources/static/img.png)
 
 ## Database Seeder
 
