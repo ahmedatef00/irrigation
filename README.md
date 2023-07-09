@@ -1,4 +1,4 @@
-# Irrigation System Readme
+# Irrigation System 
 
 This repository contains the code for an irrigation system, which provides APIs for managing plots and configuring irrigation processes. The system allows users to add, edit, and retrieve information about plots, as well as configure irrigation processes for specific plots.
 
